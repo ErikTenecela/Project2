@@ -5,7 +5,7 @@ module.exports = function(app) {
     // Load index page
     app.get("/", async(req, res) => {
         try {
-            const dbExamples = await db.Example.findAll({});
+            const dbExamples = await db.Baby.findAll({});
             res.render("index", {
                 msg: "Welcome!",
                 examples: dbExamples
